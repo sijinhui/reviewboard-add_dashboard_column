@@ -1,0 +1,33 @@
+[tool.pytest.ini_options]
+DJANGO_SETTINGS_MODULE = "reviewboard.settings"
+django_debug_mode = false
+
+python_files = ["tests.py", "test_*.py"]
+python_classes = ["*Tests"]
+python_functions = ["test_*"]
+pythonpath = "."
+testpaths = ["add_dashboard_column"]
+
+env = [
+    "RB_RUNNING_TESTS=1",
+    "RBSSH_STORAGE_BACKEND=reviewboard.ssh.storage.FileSSHStorage",
+]
+
+addopts = ["--reuse-db"]
+
+required_plugins = [
+    "pytest-django",
+    "pytest-env",
+]
+
+[project]
+name = "reviewboard-add-dashboard-column"
+version = "1.0.0"
+dependencies = [
+    "reviewboard==7.0.3",
+    "pytest-django",
+    "pytest-env",
+    "pip>=25.1",
+    "wheel",
+    "djblets==5.2",
+]

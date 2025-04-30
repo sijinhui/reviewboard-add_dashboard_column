@@ -1,0 +1,9 @@
+
+.idea/
+.venv/
+*.egg-info/
+build/
+dist/
+
+
+add_dashboard_column/__pycache__/

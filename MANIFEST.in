@@ -1,0 +1,9 @@
+graft add_dashboard_column/add_dashboard_column/templates
+graft add_dashboard_column/add_dashboard_column/static
+
+include COPYING
+include INSTALL
+include README.md
+include *-requirements.txt
+
+global-exclude .*.sw[op] *.py[co] __pycache__ .DS_Store .noseids
