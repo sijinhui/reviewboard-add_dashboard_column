@@ -25,8 +25,8 @@ name = "add-dashboard-column"
 version = "1.0.0"
 requires-python = "~=3.9"
 dependencies = [
-    "reviewboard==7.0.3",
+    "reviewboard~=7.0.3",
     "setuptools",
     "wheel",
-    "djblets==5.2",
+    "djblets~=5.2",
 ]

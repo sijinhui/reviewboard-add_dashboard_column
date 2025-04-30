@@ -15,8 +15,8 @@ dependencies = [
 
 [package.metadata]
 requires-dist = [
-    { name = "djblets", specifier = "==5.2" },
-    { name = "reviewboard", specifier = "==7.0.3" },
+    { name = "djblets", specifier = "~=5.2" },
+    { name = "reviewboard", specifier = "~=7.0.3" },
     { name = "setuptools" },
     { name = "wheel" },
 ]
