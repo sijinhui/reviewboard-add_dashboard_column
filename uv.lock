@@ -1,6 +1,6 @@
 version = 1
 revision = 2
-requires-python = ">=3.9"
+requires-python = ">=3.9, <4"
 
 [[package]]
 name = "asana"
@@ -938,6 +938,7 @@ dependencies = [
     { name = "pytest-django" },
     { name = "pytest-env" },
     { name = "reviewboard" },
+    { name = "setuptools" },
     { name = "wheel" },
 ]
 
@@ -948,7 +949,17 @@ requires-dist = [
     { name = "pytest-django" },
     { name = "pytest-env" },
     { name = "reviewboard", specifier = "==7.0.3" },
+    { name = "setuptools" },
     { name = "wheel" },
+]
+
+[[package]]
+name = "setuptools"
+version = "80.0.1"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/26/da/7a7021c150030617f90aa4a90a5b23f7b49af877f70ca46967e991645117/setuptools-80.0.1.tar.gz", hash = "sha256:20fe373a22ef9f3925512650d1db90b1b8de01cdb6df91ab1788263139cbf9a2", size = 1354165, upload_time = "2025-04-30T01:41:10.956Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/2a/8e/2ee81652472f3c11503d1780c41844a9a9656989b69c29811a4631e4aeb9/setuptools-80.0.1-py3-none-any.whl", hash = "sha256:f4b49d457765b3aae7cbbeb1c71f6633a61b729408c2d1a837dae064cca82ef2", size = 1240915, upload_time = "2025-04-30T01:41:09.155Z" },
 ]
 
 [[package]]
