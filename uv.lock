@@ -3,6 +3,25 @@ revision = 2
 requires-python = ">=3.9, <4"
 
 [[package]]
+name = "add-dashboard-column"
+version = "1.0.0"
+source = { virtual = "." }
+dependencies = [
+    { name = "djblets" },
+    { name = "reviewboard" },
+    { name = "setuptools" },
+    { name = "wheel" },
+]
+
+[package.metadata]
+requires-dist = [
+    { name = "djblets", specifier = "==5.2" },
+    { name = "reviewboard", specifier = "==7.0.3" },
+    { name = "setuptools" },
+    { name = "wheel" },
+]
+
+[[package]]
 name = "asana"
 version = "5.0.16"
 source = { registry = "https://pypi.org/simple" }
@@ -848,25 +867,6 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/41/54/0c71e0e291ab94b7fe87a2223af312c86c86ea243bf9949cc95bd3cc9b65/reviewboard-7.0.3.tar.gz", hash = "sha256:925fded314ceb48e37f64dd2d9f846dbf554bcae488b4c0da7514a7045425ebd", size = 26726413, upload_time = "2024-12-18T07:48:59.217Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/60/9b/3eea72182432f2001e85f4a3db34d392f66651b660044f414f8e85e38bca/ReviewBoard-7.0.3-py3-none-any.whl", hash = "sha256:c065fe4accef180d5931f4c1b538853e94bc434cd249b2e7626214cc0bc5c6ab", size = 14961332, upload_time = "2024-12-18T07:48:45.873Z" },
-]
-
-[[package]]
-name = "reviewboard-add-dashboard-column"
-version = "1.0.0"
-source = { virtual = "." }
-dependencies = [
-    { name = "djblets" },
-    { name = "reviewboard" },
-    { name = "setuptools" },
-    { name = "wheel" },
-]
-
-[package.metadata]
-requires-dist = [
-    { name = "djblets", specifier = "==5.2" },
-    { name = "reviewboard", specifier = "==7.0.3" },
-    { name = "setuptools" },
-    { name = "wheel" },
 ]
 
 [[package]]
