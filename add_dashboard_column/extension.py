@@ -44,10 +44,10 @@ def is_timestamp(s):
 def convert_timestamp_to_time(s):
     if is_timestamp(s):
         timestamp = float(s)
-        # 将时间戳转为 UTC 时间的 datetime 对象
-        utc_dt = datetime.utcfromtimestamp(timestamp).replace(tzinfo=timezone.utc)
+        # 使用 timezone-aware 的 datetime 对象
+        dt = datetime.fromtimestamp(timestamp, tz=timezone.utc)
         # 转换为 Django 设置的当前时区
-        local_dt = timezone.localtime(utc_dt)
+        local_dt = timezone.localtime(dt)
         # 格式化输出
         return local_dt.strftime("%Y-%m-%d %H:%M:%S")
     else:
