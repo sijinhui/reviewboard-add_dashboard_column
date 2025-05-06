@@ -1,1 +1,1 @@
-pytest_plugins = ['reviewboard.testing.pytest_fixtures']
+pytest_plugins = ["reviewboard.testing.pytest_fixtures"]
