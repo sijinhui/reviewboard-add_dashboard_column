@@ -24,7 +24,9 @@ required_plugins = [
 name = "add-dashboard-column"
 version = "1.0.0"
 requires-python = "~=3.9"
-dependencies = [
+
+[tool.uv]
+dev-dependencies = [
     "reviewboard~=7.0.3",
     "setuptools",
     "wheel",

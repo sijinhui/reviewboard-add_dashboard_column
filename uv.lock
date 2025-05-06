@@ -6,7 +6,9 @@ requires-python = ">=3.9, <4"
 name = "add-dashboard-column"
 version = "1.0.0"
 source = { virtual = "." }
-dependencies = [
+
+[package.dev-dependencies]
+dev = [
     { name = "djblets" },
     { name = "reviewboard" },
     { name = "setuptools" },
@@ -14,7 +16,9 @@ dependencies = [
 ]
 
 [package.metadata]
-requires-dist = [
+
+[package.metadata.requires-dev]
+dev = [
     { name = "djblets", specifier = "~=5.2" },
     { name = "reviewboard", specifier = "~=7.0.3" },
     { name = "setuptools" },
