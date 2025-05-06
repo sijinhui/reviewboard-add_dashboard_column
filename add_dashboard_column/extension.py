@@ -49,7 +49,7 @@ def convert_timestamp_to_time(s):
         # 转换为 Django 设置的当前时区
         local_dt = timezone.localtime(dt)
         # 格式化输出
-        return local_dt.strftime("%Y-%m-%d %H:%M:%S")
+        return local_dt.strftime("%Y-%m-%d %H:%M")
     else:
         return ""
 
