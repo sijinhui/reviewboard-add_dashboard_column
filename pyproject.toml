@@ -22,7 +22,7 @@ required_plugins = [
 
 [project]
 name = "reviewboard-add_dashboard_column"
-version = "1.0.2"
+version = "1.0.3"
 requires-python = ">=3.9"
 authors = [
   { name="sijinhui", email="sijinhui@qq.com" },
@@ -34,6 +34,7 @@ classifiers = [
     "Programming Language :: Python :: 3",
     "Operating System :: OS Independent",
 ]
+readme = "README.md"
 
 [project.urls]
 Homepage = "https://gitlab.xiaosi.cc/sijinhui/add_dashboard_column.git "

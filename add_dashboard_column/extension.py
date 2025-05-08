@@ -48,8 +48,7 @@ def convert_timestamp_to_time(s):
         dt = datetime.fromtimestamp(timestamp, tz=timezone.utc)
         # 转换为 Django 设置的当前时区
         local_dt = timezone.localtime(dt)
-        # 格式化输出
-        return local_dt.strftime("%Y/%m/%d %H:%M")
+        return local_dt
     else:
         return ""
 
@@ -74,18 +73,12 @@ class AlreadyUsedColumn(Column):
             The rendered data as HTML.
         """
         result = ""
+        self.css_class = ""
         if "already_used_in_post_commit_hook" in obj.extra_data:
             used_time = obj.extra_data.get("used_time")
             if used_time and is_timestamp(used_time):
-                result = ( convert_timestamp_to_time(used_time) )
-                self.css_class = ageid(result)
-                # result = (
-                #     '<span class="already_used_in_post_commit_hook" style="white-space:nowrap;">%s(%s)</span>'
-                #     % (
-                #         escape(obj.extra_data["already_used_in_post_commit_hook"]),
-                #         convert_timestamp_to_time(used_time),
-                #     )
-                # )
+                result = convert_timestamp_to_time(used_time).strftime("%Y/%m/%d %H:%M")
+                self.css_class = ageid(convert_timestamp_to_time(used_time))
             else:
                 result = (
                     '<span class="already_used_in_post_commit_hook" style="white-space:nowrap;">%s</span>'
