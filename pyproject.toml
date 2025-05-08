@@ -21,9 +21,23 @@ required_plugins = [
 ]
 
 [project]
-name = "add-dashboard-column"
+name = "reviewboard-add_dashboard_column"
 version = "1.0.0"
-requires-python = "~=3.9"
+requires-python = ">=3.9"
+authors = [
+  { name="sijinhui", email="sijinhui@qq.com" },
+]
+description = "为reviewboard添加自定义的列"
+license = "MIT"
+license-files = ["LICEN[CS]E*"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://gitlab.xiaosi.cc/sijinhui/add_dashboard_column.git "
+
 
 [tool.uv]
 dev-dependencies = [

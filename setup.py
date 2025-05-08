@@ -3,9 +3,9 @@ from setuptools import find_packages
 
 
 setup(
-    name="add_dashboard_column",
+    name="reviewboard-add_dashboard_column",
     version="1.0",
-    description="自定义扩展列",
+    description="自定义扩展reviewboard列",
     author="sijinhui",
     author_email="sijinhui@qq.com",
     packages=find_packages(),
