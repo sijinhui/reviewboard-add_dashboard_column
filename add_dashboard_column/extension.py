@@ -176,7 +176,7 @@ class AddDashboardColumnExtension(Extension):
                 self,
                 [
                     AlreadyUsedColumn(
-                        id="already_used_in_post_commit_hook", label="是否被提交"
+                        id="already_used_in_post_commit_hook", label="提交时间"
                     ),
                     CustomApprovalStatusColumn(
                         id="custom_approval_status", label="审批状态"
@@ -189,7 +189,7 @@ class AddDashboardColumnExtension(Extension):
             ReviewRequestDataGrid,
             [
                 AlreadyUsedColumn(
-                    id="already_used_in_post_commit_hook", label="是否被提交"
+                    id="already_used_in_post_commit_hook", label="提交时间"
                 ),
                 CustomApprovalStatusColumn(
                     id="custom_approval_status", label="审批状态"
