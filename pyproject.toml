@@ -37,7 +37,7 @@ classifiers = [
 readme = "README.md"
 
 [project.urls]
-Homepage = "https://gitlab.xiaosi.cc/sijinhui/add_dashboard_column.git "
+Homepage = "https://github.com/sijinhui/reviewboard-add_dashboard_column"
 
 
 [tool.uv]
