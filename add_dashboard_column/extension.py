@@ -4,8 +4,9 @@ from typing import Any
 
 from django.utils.translation import gettext_lazy as _
 from reviewboard.extensions.base import Extension
-from reviewboard.extensions.hooks import TemplateHook
-from djblets.util.templatetags.djblets_utils import ageid
+# from reviewboard.extensions.hooks import TemplateHook
+# from djblets.util.templatetags.djblets_utils import ageid
+# from reviewboard.extensions.hooks import ReviewUIHook
 from django.utils.html import escape
 from djblets.datagrid.grids import Column, StatefulColumn
 
@@ -75,22 +76,18 @@ class AlreadyUsedColumn(Column):
         result = ""
         self.css_class = ""
         if "already_used_in_post_commit_hook" in obj.extra_data:
+            self.css_class = 'age11'
             used_time = obj.extra_data.get("used_time")
             if used_time and is_timestamp(used_time):
                 result = convert_timestamp_to_time(used_time).strftime("%Y/%m/%d %H:%M")
-                self.css_class = ageid(convert_timestamp_to_time(used_time))
+                # self.css_class = ageid(convert_timestamp_to_time(used_time))
             else:
-                result = (
-                    '<span class="already_used_in_post_commit_hook" style="white-space:nowrap;">%s</span>'
-                    % escape(obj.extra_data.get("already_used_in_post_commit_hook", ""))
-                )
+                result = escape(obj.extra_data.get("already_used_in_post_commit_hook", ""))
         else:
-            result = (
-                '<span class="already_used_in_post_commit_hook" style="white-space:nowrap;">%s</span>'
-                % escape("未提交")
-            )
+            self.css_class = 'age15'
+            result = escape("未提交")
 
-        return result
+        return f'<span class="already_used_in_post_commit_hook" style="white-space:nowrap;">{result}</span>'
 
 
 class CustomApprovalStatusColumn(Column):
@@ -172,6 +169,7 @@ class AddDashboardColumnExtension(Extension):
         #              'before-login-form',
         #              'add_dashboard_column/before-login-form.html')
         (
+            # ReviewUIHook(self, [DateColorReviewUIExtension]),
             DashboardColumnsHook(
                 self,
                 [
